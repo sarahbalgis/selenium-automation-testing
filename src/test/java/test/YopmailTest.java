@@ -25,12 +25,12 @@ public class YopmailTest extends BaseTest {
 
         String txtExpectedSubjectMail = "[Reminder] Review Request Pending";
 
-        Assert.assertEquals(secondPage.getMailText(), txtExpectedSubjectMail,
-                "Verification passed! Mail subject is as expected.");
-
         System.out.println("Verification passed! Mail subject is as expected.");
         System.out.println("Expected Subject: " + txtExpectedSubjectMail);
         System.out.println("Actual Subject: " + secondPage.getMailText());
+
+        Assert.assertEquals(secondPage.getMailText(), txtExpectedSubjectMail,
+                "Verification failed! Mail subject is not as expected.");
 
         Utility.hardWait(2);
 
