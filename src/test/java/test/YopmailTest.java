@@ -53,11 +53,11 @@ public class YopmailTest extends BaseTest {
 
         String txtExpectedSubjectMail = "Failed Subject";
 
-        System.out.println("Verification failed! Text is not as expected.");
-        System.out.println("Expected Text: " + txtExpectedSubjectMail);
-        System.out.println("Actual Text: " + secondPage.getMailText());
+        System.out.println("Verification failed! Mail Subject is not as expected.");
+        System.out.println("Expected Subject: " + txtExpectedSubjectMail);
+        System.out.println("Actual Subject: " + secondPage.getMailText());
 
-        Assert.fail("Verification failed! Text is not as expected.");
+        Assert.fail("Verification failed! Mail Subject is not as expected.");
 
         secondPage.switchToDefaultContent();
 
